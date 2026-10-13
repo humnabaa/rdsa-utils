@@ -20,24 +20,28 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    "cloudpathlib[gs]>=0.15.1",
+    "cloudpathlib>=0.15.1",
     "humanfriendly>=9.1",
     "more-itertools>=9.0.0",
     "pandas",
     "pydantic>=2.6.2",
     "pyyaml>=6.0.1",
     "tomli>=2.0.1",
-    "google-cloud-bigquery>=3.17.2",
-    "google-cloud-storage>=2.14.0",
-    "boto3>=1.34.103",
     "codetiming",
     "standard-distutils; python_version >= '3.12'",
     "xlsxwriter",
     "openpyxl",
-    "papermill",
-    "nbconvert",
-    "matplotlib",
 ]
+
+[project.optional-dependencies]
+pyspark = ["pyspark==3.5.1"]
+gcp = [
+    "cloudpathlib[gs]>=0.15.1",
+    "google-cloud-bigquery>=3.17.2",
+    "google-cloud-storage>=2.14.0",
+]
+cdp = ["boto3>=1.34.103"]
+pyspark-log-parser = ["boto3>=1.34.103", "papermill", "nbconvert", "matplotlib"]
 
 [project.urls]
 Homepage = "https://github.com/ONSdigital/rdsa-utils"

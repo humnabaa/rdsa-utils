@@ -34,6 +34,24 @@ Or with `pip`:
 pip install rdsa-utils
 ```
 
+For platform-specific features, install an optional dependency group instead:
+
+```bash
+uv add "rdsa-utils[gcp]"
+uv add "rdsa-utils[cdp]"
+uv add "rdsa-utils[pyspark]"
+uv add "rdsa-utils[pyspark-log-parser]"
+```
+
+Or with `pip`:
+
+```bash
+pip install "rdsa-utils[gcp]"
+pip install "rdsa-utils[cdp]"
+pip install "rdsa-utils[pyspark]"
+pip install "rdsa-utils[pyspark-log-parser]"
+```
+
 ## 🗂️ How the Project is Organised
 
 The `rdsa-utils` package is designed to make it easy to work with different platforms like Cloudera Data Platform (CDP) and Google Cloud Platform (GCP), as well as handle general Python tasks. Here's a breakdown of how everything is organised:
